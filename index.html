@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <h2>THE SUNSET</h2>
+        <ul>
+            <li>Home</li>
+            <li>Nature</li>
+            <li>Sunset View</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <section>       
+        <img src="./img/Sunset.png" alt="" id="sunset">
+        <img src="./img/bird.png" alt="" id="bird1">
+        <img src="./img/bird.png" alt="" id="bird2">
+        <h2 id="headi">THE SUNSET</h2>
+        <a href="#" id="btn1">Know More</a>
+        <img src="./img/Mountain.png" alt="" id="mountain">
+        <img src="./img/Combodiya.png" alt="" id="combodiya">
+        <img src="./img/Grass2.png" alt="" id="grass">
+        <img src="./img/LeavesTree.png" alt="" id="grass2">
+    </section>
+    <div class="paddr">
+
+    </div>
+
+    <div class="conte" id="conte">
+        <!-- <img src="./img/Mountain2.png" alt="" id="mountain2"> -->
+        <img src="./img/BurjKhalifa.png" alt="" id="burjkhalifa">
+        <img src="./img/stars-png-639.png" alt="" id="stars">
+        <img src="./img/Moon.png" alt="" id="moon">
+        <h1 id="headi2">Burj Khalifa  </h1>
+        <div class="burj" id="burj">
+            
+            <div class="left">
+                <p><h3>Lorem ipsum dolor sit.</h3> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsum voluptatum, ut atque beatae tenetur velit vel facere pariatur doloremque.</p>
+                <br><br>
+                
+                <p><h3>Lorem ipsum dolor sit.</h3> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellendus harum cumque inventore?</p>
+                <br><br>
+                <p><h3>Lorem ipsum dolor sit.</h3> <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, fugiat repellat voluptate iste autem qui obcaecati assumenda laudantium deleniti dolores quo voluptatem nihil! Itaque sequi fuga inventore quia molestias! Eius voluptas aut repellendus. Dolorum eligendi praesentium cumque illo vero, ad, placeat minima optio repellat veritatis ab quasi recusandae, vitae voluptatem?</p>
+
+            </div>
+            <div class="right">
+                <h1 id="headi3"> I LOVE <br>BURJ KHALIFA</h1>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    <script>
+        let sunset = document.getElementById("sunset");
+        let bird1 = document.getElementById("bird1");
+        let bird2 = document.getElementById("bird2");
+        let mountain = document.getElementById("mountain");
+        let combodiya = document.getElementById("combodiya");
+        let headi = document.getElementById("headi");
+        let conte = document.getElementById("conte");
+        let burjkhalifa = document.getElementById("burjkhalifa");
+        let burj = document.getElementById("burj");
+        let headi2 = document.getElementById("headi2");
+        let headi3 = document.getElementById("headi3");
+        let moon = document.getElementById("moon");
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+            sunset.style.marginTop = value* -.4 +"px"
+            bird1.style.left = value* .4 +"px"
+            bird1.style.marginTop = value* 1 +"px"
+            bird2.style.marginTop = value* 1 +"px"
+            bird2.style.marginLeft = value* -.8 +"px"
+            combodiya.style.marginTop = value * 1 +"px"
+            // headi.style.marginLeft = value * .3 +"px"
+            headi.style.marginTop = value * 1.8 +"px"
+            moon.style.marginLeft = value * -.3 + "px"
+            moon.style.marginTop = value * .6 + "px"
+
+            if(1000<value){
+                // console.log("hijd")
+                bird1.style.display = "none"
+                bird2.style.display = "none"
+                combodiya.style.display = "none"
+                headi.style.display = "none"
+                stars.style.display = "inline-block"  
+                stars.style.top = value *.3 +"px"              
+                conte.style.background = "black"
+                burj.style.color = "white"
+                headi2.style.color = "white"
+                headi3.style.color = "white"
+                              
+            }else if(1000>value){
+                bird1.style.display = "inline-block"
+                bird2.style.display = "inline-block"
+                combodiya.style.display = "inline-block"
+                headi.style.display = "inline-block"
+                stars.style.display = "none"
+                conte.style.background = "white"
+                burj.style.color = "black"
+                headi2.style.color = "black"
+                headi3.style.color = "black"
+                
+            }else if(500<value){
+                
+                combodiya.style.display = "none"
+                combodiya.style.transition = "none"
+                
+                              
+            }else if(500>value){
+                combodiya.style.transition = "none"
+                combodiya.style.display = "inline-block"
+                // moon.style.marginLeft = value * 1 + "px"
+                
+            }
+            
+            // console.log(value)
+        })
+    </script>
+    
+</body>
+</html>

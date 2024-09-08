@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: rgb(18, 19, 7);
+    padding: 5px 10px;
+}
+ul{
+    display: flex;
+    padding: 5px 10px;
+}
+li{
+    padding: 5px 20px;
+    list-style: none;
+    cursor: pointer;
+    transition: .3s ease;
+    font-size: 1.4vw;
+}
+li:hover{
+    border-bottom: 3px solid black;
+}
+
+section{
+    position: relative;
+    width: 100%;
+}
+section img{
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease;
+    pointer-events: none;
+}
+img#sunset{
+    width: 100%;
+    z-index: 0;
+}
+#bird1{
+    width: 20%;
+    z-index: 1;
+}
+#bird2{
+    width: 15%;
+    transform: scalex(-1);
+    left: 80%;
+    z-index: 1;
+}
+#headi{
+    position: absolute;
+    /* top: 190px; */
+    top: 100px;
+    left: 16%;
+    text-align: center;
+    z-index: 2;
+    font-size: 10vw;
+}
+a{
+    text-decoration: none;
+}
+#btn1{
+    position: absolute;
+    top: 290px;
+    left: 45%;
+    color: white;
+    background-color: black;
+    padding: 10px 24px;
+    border-radius: 34px;
+    z-index: 3;
+    transition: all .4s ease;
+}
+#btn1:hover{
+    background-color: white;
+    color: black;
+}
+#mountain{
+    top: 206px;
+    z-index: 3;
+}
+#combodiya{
+    width: 40%;
+    z-index: 2;
+    left: 50%;
+    top: 180px;
+}
+#grass{
+    width: 40%;
+    z-index: 14;
+    top: 590px;
+}
+#grass2{
+    width: 14%;
+    z-index: 14;
+    top: 790px;
+    left: 70%;
+}
+.paddr{
+    position: relative;
+    background-color: white;
+    top: 915px;
+    /* height: 30px; */
+    z-index: 13;
+    box-shadow: 2px 2px 168px #1c3406;
+}
+.paddr::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c3406, transparent);
+    z-index: 100;
+}
+
+.conte{
+    position: relative;
+    top: 912px;
+    background-color: white;
+    z-index: 13;
+}
+#conte{
+    transition: 1s ease;
+}
+
+
+#burjkhalifa{
+    width: 100%;
+    /* background-blend-mode: lighten; */
+    position: relative;
+    z-index: 16;
+}
+#stars{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    /* background-blend-mode: lighten; */
+    /* opacity: 1; */
+    z-index: 15;
+    transition: .7s ease;
+}
+#moon{
+    width: 10%;
+    position: absolute;
+    top: 28px;
+    left: 90%;
+    z-index: 15;
+
+}
+
+#headi2{
+    position: absolute;
+    top: 0;
+    left: 36%;
+    font-size: 4vw;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px;
+    text-transform: uppercase;
+}
+.burj{
+    display: flex;
+    position: absolute;
+    top: 200px;
+}
+#burj{
+    transition: 1s ease;
+}
+.left{
+    flex-basis: 40%;
+    padding: 8px 22px;
+}
+.left>p{
+    padding: 60px 0px;
+}
+
+.right{
+   
+    /* flex-basis: 40%; */
+    padding: 8px 22px;
+}
+#headi3{
+    position: absolute;
+    left: 60%;
+    top: 450px;
+}
+
+@media screen and (max-width: 1210px) {
+   section{
+    display: none;
+   }
+
+   div{
+    display: none;
+   }
+   nav{
+     display: none;
+   }
+   body::after{
+    width: 100%;
+    height: 400px;
+    content: 'This Website View only Desktop';
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+   }
+
+  }
